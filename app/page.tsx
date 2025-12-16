@@ -21,8 +21,10 @@ export default async function Home() {
           Random Pokémon
         </button>
       </section>
-      <h1>Featured Pokémon</h1>
-      <FeaturedList />
+      <h1 className="text-center my-5 text-4xl">Featured Pokémon</h1>
+      <div className="flex justify-center">
+        <FeaturedList />
+      </div>
     </main>
   );
 }
