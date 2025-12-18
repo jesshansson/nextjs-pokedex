@@ -2,8 +2,9 @@ const BASE_URL = "https://pokeapi.co/api/v2";
 
 export async function getPokemon(nameOrId:string | number) {
 const res = await fetch(
-    `${BASE_URL}/pokemon/${String(nameOrId).toLowerCase()}`
-  );
+  `${BASE_URL}/pokemon/${String(nameOrId).toLowerCase()}`,
+  { next: { revalidate: 3600 } } // cache 1 hour for faster performance
+)
 
   if (!res.ok) {
     throw new Error("Could not fetch Pokémon")

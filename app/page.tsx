@@ -2,6 +2,7 @@ import FeaturedList from "@/components/FeaturedList";
 import PokemonCard from "@/components/PokemonCard";
 import { getPokemon } from "@/lib/pokeapi";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Home() {
   const pokemon = await getPokemon("pikachu");
@@ -16,10 +17,12 @@ export default async function Home() {
           Discover, search and explore the amazing world of Pokémon. Find
           <br /> your favourite and learn about their stats.
         </p>
-        <button className="btn-primary">
-          <Image src="/Dice.svg" width={25} height={25} alt="Dice" />
-          Random Pokémon
-        </button>
+        <Link href="/random" className="btn-primary">
+          <button className="btn-primary">
+            <Image src="/Dice.svg" width={25} height={25} alt="Dice" />
+            Random Pokémon
+          </button>
+        </Link>
       </section>
       <h1 className="text-center my-5 text-4xl">Featured Pokémon</h1>
       <div className="flex justify-center">

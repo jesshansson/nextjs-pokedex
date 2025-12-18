@@ -45,7 +45,7 @@ h1, h2, h3 {
 }
 
 .btn-primary {
-  @apply p-2 pl-6 pr-6 mt-4 mb-14 cursor-pointer text-xl text-white bg-gradient-to-r from-orange-400 to-red-400 rounded-full font-bold flex items-center justify-center gap-1;
+  @apply p-2 pl-6 pr-6  cursor-pointer text-xl text-white bg-gradient-to-r from-orange-400 to-red-400 rounded-full font-bold flex items-center justify-center gap-1;
 }
 
 .text-gradient {
