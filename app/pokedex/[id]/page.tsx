@@ -14,7 +14,9 @@ export default async function PokemonDetailsPage({
 
     return (
       <main style={{ padding: 24 }}>
-        <h1 style={{ textTransform: "capitalize" }}>{pokemon.name}</h1>
+        <h1 style={{ textTransform: "capitalize" }} className="text-3xl">
+          {pokemon.name}
+        </h1>
 
         {pokemon.sprites.front_default ? (
           <img

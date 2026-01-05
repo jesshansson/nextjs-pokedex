@@ -18,12 +18,17 @@ export default function PokemonCard({
         maxWidth: 320,
       }}
     >
-      <h2 style={{ textTransform: "capitalize" }}>{name}</h2>
+      <h2
+        style={{ textTransform: "capitalize" }}
+        className="text-2xl text-center"
+      >
+        {name}
+      </h2>
 
       <img src={image} alt={name} width={150} height={150} />
 
       <p>
-        Type: <strong>{typeName}</strong>
+        Type: <strong> {typeName}</strong>
       </p>
     </article>
   );

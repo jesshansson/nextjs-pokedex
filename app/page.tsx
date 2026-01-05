@@ -1,5 +1,7 @@
 import FeaturedList from "@/components/FeaturedList";
+import Footer from "@/components/Footer";
 import PokemonCard from "@/components/PokemonCard";
+import SearchForm from "@/components/SearchForm";
 import { getPokemon } from "@/lib/pokeapi";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,9 +10,9 @@ export default async function Home() {
   const pokemon = await getPokemon("pikachu");
 
   return (
-    <main style={{ padding: 24 }}>
+    <main>
       <section className="flex flex-col items-center gap-4 bg-gradient-to-br [background-image:linear-gradient(-10deg,_#C97FE4,_#AECDF6)] p-14">
-        <h1 className="text-center mt-14 text-8xl font-extrabold text-transparent bg-gradient-to-r from-purple-800 to-blue-800 [background-clip:text]">
+        <h1 className="text-center mt-14 text-6xl font-extrabold text-transparent bg-gradient-to-r from-purple-800 to-blue-800 [background-clip:text]">
           Gotta catch 'em all!
         </h1>
         <p className="text-center text-white text-xl">
@@ -24,10 +26,16 @@ export default async function Home() {
           </button>
         </Link>
       </section>
+      <div className="flex justify-center my-10">
+        {" "}
+        <SearchForm />
+      </div>
+
       <h1 className="text-center my-5 text-4xl">Featured Pokémon</h1>
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-10 sm:mb-36">
         <FeaturedList />
       </div>
+      <Footer />
     </main>
   );
 }
