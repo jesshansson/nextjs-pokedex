@@ -10,7 +10,7 @@ export default function Footer() {
             <p className="text-gray-400">Explore the world of Pokémon</p>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-4">Links</h3>
+            <h3 className="text-lg mb-4">Links</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="/">Home</Link>
@@ -21,7 +21,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact</h3>
+            <h3 className="text-lg mb-4">Contact</h3>
             <Link href="https://jessicahansson.netlify.app/" target="_blank">
               <p className="text-gray-400">Jessica Hansson</p>
             </Link>

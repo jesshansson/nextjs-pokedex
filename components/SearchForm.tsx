@@ -3,18 +3,17 @@ export default function SearchForm() {
     <form
       action="/search-results"
       method="GET"
-      style={{ display: "flex", gap: 8 }}
+      className="flex flex-col max-w-sm sm:flex-row gap-3 items-center"
     >
       <input
         name="q"
         placeholder="Search Pokémon (e.g. pikachu)"
-        style={{
-          padding: "10px 12px",
-          borderRadius: 8,
-          border: "1px solid #ccc",
-        }}
+        className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
       />
-      <button type="submit" className="btn-primary">
+      <button
+        type="submit"
+        className="btn-primary mt-4 sm:mt-0 px-6 py-2 text-white rounded-lg"
+      >
         Search
       </button>
     </form>

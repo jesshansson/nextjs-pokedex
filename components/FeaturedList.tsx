@@ -7,8 +7,8 @@ export default async function FeaturedList() {
   const pokemons = await Promise.all(ids.map((id) => getPokemon(id)));
 
   return (
-    <section>
-      <div className=" flex flex-wrap gap-4 justify-items-center">
+    <section className="w-full px-4">
+      <div className=" flex flex-wrap gap-4 justify-center items-center ">
         {pokemons.map((pokemon) => (
           <PokemonCard
             key={pokemon.id}

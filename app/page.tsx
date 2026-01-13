@@ -27,7 +27,6 @@ export default async function Home() {
         </Link>
       </section>
       <div className="flex justify-center my-10">
-        {" "}
         <SearchForm />
       </div>
 
