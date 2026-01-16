@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getPokemon } from "@/lib/pokeapi";
 import PokemonCard from "@/components/PokemonCard";
+import Link from "next/link";
 
 export default async function SearchResultsPage({
   searchParams,
@@ -20,12 +21,14 @@ export default async function SearchResultsPage({
           Search result for:{" "}
           <span style={{ textTransform: "capitalize" }}>{q}</span>
         </h1>
-
         <PokemonCard
           name={pokemon.name}
           image={pokemon.sprites.front_default}
           typeName={pokemon.types?.[0]?.type?.name ?? "unknown"}
         />
+        <div className="my-5 text-xl">
+          <Link href="/">Go back</Link>
+        </div>
       </main>
     );
   } catch {
